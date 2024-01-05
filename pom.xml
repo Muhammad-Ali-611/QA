@@ -8,13 +8,19 @@ http://www.w3.org/2001/XMLSchema-instance ">
     <groupId>org.example</groupId>
     <artifactId>Project1</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>WebTesting</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
+
+    </properties>
+<dependencyManagement>
     <dependencies>
 
 
@@ -135,6 +141,8 @@ http://www.w3.org/2001/XMLSchema-instance ">
             <version>3.141.59</version>
         </dependency>
 
+
+
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
@@ -144,7 +152,7 @@ http://www.w3.org/2001/XMLSchema-instance ">
 
 
 </dependencies>
-
+</dependencyManagement>
     <build>
         <plugins>
             <plugin>
